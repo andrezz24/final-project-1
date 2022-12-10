@@ -36,7 +36,6 @@ class Controller(QMainWindow, Ui_MainWindow):
         Method also changes the TV channel picture displayed on remote
         """
         tv_1.power()
-        print(tv_1)
         if tv_1.get_status() is True:
             self.pushButton_power.setText('ON')
 
@@ -81,7 +80,6 @@ class Controller(QMainWindow, Ui_MainWindow):
                 self.label_for_image.setPixmap(QtGui.QPixmap("images/nfl-redzone.jpg"))
             else:
                 self.label_for_image.setPixmap(QtGui.QPixmap("images/abc.png"))
-            print(tv_1)
 
     def channel_down_button(self) -> None:
         """
@@ -106,7 +104,6 @@ class Controller(QMainWindow, Ui_MainWindow):
                 self.label_for_image.setPixmap(QtGui.QPixmap("images/nfl-redzone.jpg"))
             else:
                 self.label_for_image.setPixmap(QtGui.QPixmap("images/abc.png"))
-            print(tv_1)
 
     def volume_button_up(self) -> None:
         """
@@ -116,7 +113,6 @@ class Controller(QMainWindow, Ui_MainWindow):
         if tv_1.get_status() is True:
             tv_1.volume_up()
             self.verticalSlider_vol.setSliderPosition(tv_1.get_volume())
-            print(tv_1)
 
     def volume_down_button(self) -> None:
         """
@@ -126,7 +122,6 @@ class Controller(QMainWindow, Ui_MainWindow):
         if tv_1.get_status() is True:
             tv_1.volume_down()
             self.verticalSlider_vol.setSliderPosition(tv_1.get_volume())
-            print(tv_1)
 
     def mute_volume(self) -> None:
         """
@@ -134,7 +129,6 @@ class Controller(QMainWindow, Ui_MainWindow):
         """
         if tv_1.get_status() is True:
             tv_1.mute()
-            print(tv_1)
             if self.verticalSlider_vol.value() != 0:
                 self.verticalSlider_vol.setSliderPosition(0)
             else:
@@ -148,7 +142,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(0)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/espn.jpeg"))
-            print(tv_1)
 
     def set_ch1(self) -> None:
         """
@@ -158,7 +151,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(1)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/cnn.png"))
-            print(tv_1)
 
     def set_ch2(self) -> None:
         """
@@ -168,7 +160,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(2)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/fox.jpeg"))
-            print(tv_1)
 
     def set_ch3(self) -> None:
         """
@@ -178,7 +169,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(3)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/nbc.jpeg"))
-            print(tv_1)
 
     def set_ch4(self) -> None:
         """
@@ -188,7 +178,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(4)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/cbs.jpeg"))
-            print(tv_1)
 
     def set_ch5(self) -> None:
         """
@@ -198,7 +187,6 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(5)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/nfl-redzone.jpg"))
-            print(tv_1)
 
     def set_ch6(self) -> None:
         """
@@ -208,4 +196,3 @@ class Controller(QMainWindow, Ui_MainWindow):
             tv_1.set_channel(6)
             self.verticalSlider_ch.setSliderPosition(tv_1.get_channel())
             self.label_for_image.setPixmap(QtGui.QPixmap("images/abc.png"))
-            print(tv_1)
